@@ -1,0 +1,10 @@
+<div class="card-container">
+
+<ul>
+  <li *ngFor='let p of products | async'>
+    {{p.name}}
+  <button *ngIf='!p.sold' type="button" name="button" (click)='buy(p)'>buy</button>
+  <button *ngIf='!!p.sold' type="button" name="button" (click)='unbuy(p)'>unbuy</button>
+  </li>
+</ul>
+</div>
